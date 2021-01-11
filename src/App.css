@@ -43,6 +43,7 @@ body::after {
   text-decoration: none;
   color: #eee;
   transition: all 0.3s ease;
+  animation: entrada-inicio 1s ease;
 }
 
 .btn-inicio:hover {
@@ -51,6 +52,7 @@ body::after {
 
 .btns-leng {
   display: flex;
+  animation: entrada-lang 1s ease;
 }
 
 .btns-leng button {
@@ -70,6 +72,7 @@ body::after {
   align-items: center;
   color: #eee;
   margin: 25vh 0 25vh 0;
+  animation: entrada-ppal 1s ease;
 }
 
 .home img {
@@ -423,6 +426,7 @@ body::after {
 .redes {
   display: flex;
   justify-content: center;
+  animation: entrada-footer 1s ease;
 }
 
 .item-redes {
@@ -462,5 +466,67 @@ body::after {
   transition: opacity 150ms linear;
 }
 
+@keyframes entrada-inicio {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes entrada-lang {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes entrada-ppal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes entrada-footer {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 500px) {
+  .slider {
+    top: 25%;
+  }
+  .btn-ant,
+  .btn-sig {
+    top: 95%;
+    font-size: 1.25rem;
+  }
+
+  .btn-ant {
+    left: 40%;
+  }
+
+  .btn-sig {
+    right: 40%;
+  }
+
+  .container-modal-sec {
+    width: 90vw;
+  }
 }

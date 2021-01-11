@@ -7,12 +7,8 @@ import Info from "../componentes/Info";
 export default function Home({ ingles }) {
   const [estaAbierto, setestaAbierto] = useState(false);
 
-  const abrirModal = () => {
-    setestaAbierto(true);
-  };
-
-  const cerrarModal = () => {
-    setestaAbierto(false);
+  const toggleModal = () => {
+    setestaAbierto(!estaAbierto);
   };
 
   return (
@@ -34,7 +30,7 @@ export default function Home({ ingles }) {
           </Link>
         </li>
         <li>
-          <i className="fas fa-user fa-3x" onClick={abrirModal}></i>
+          <i className="fas fa-user fa-3x" onClick={toggleModal}></i>
           <CSSTransition
             in={estaAbierto}
             appear={true}
@@ -44,7 +40,7 @@ export default function Home({ ingles }) {
           >
             <Info
               estaAbierto={estaAbierto}
-              cerrarModal={cerrarModal}
+              toggleModal={toggleModal}
               ingles={ingles}
             />
           </CSSTransition>

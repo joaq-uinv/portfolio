@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import Input from "../componentes/Input";
 import dbFirebase from "../firebase";
 
-export default function Contacto({ ingles, cerrarModal }) {
+export default function Contacto({ ingles, toggleModal }) {
   const [inputs, setInputs] = useState({ nombre: "", mail: "", msj: "" });
 
   const datosInputs = [
@@ -39,7 +39,7 @@ export default function Contacto({ ingles, cerrarModal }) {
     <div className="container-contacto">
       <header className="header-contacto">
         <h2>{!ingles ? "¡Charlemos!" : "Let's talk!"}</h2>
-        <button className="btn-cerrar-modal" onClick={cerrarModal}>
+        <button className="btn-cerrar-modal" onClick={toggleModal}>
           <i className="fas fa-times"></i>
         </button>
       </header>

@@ -6,7 +6,7 @@ import About from "../componentes/About";
 import Contacto from "../componentes/Contacto";
 import Tech from "../componentes/Tech";
 
-export default function Info({ estaAbierto, cerrarModal, ingles }) {
+export default function Info({ toggleModal, estaAbierto, ingles }) {
   if (!estaAbierto) return null;
 
   const techs = [
@@ -54,7 +54,7 @@ export default function Info({ estaAbierto, cerrarModal, ingles }) {
         <div className="container-modal-sec" style={{ color: "#eee" }}>
           <section className="info-ppal-modal">
             <About ingles={ingles} />
-            <Contacto ingles={ingles} cerrarModal={cerrarModal} />
+            <Contacto ingles={ingles} toggleModal={toggleModal} />
           </section>
           <section className="tecnologias-modal">
             {techs.map((tech, i) => (
