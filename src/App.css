@@ -209,6 +209,7 @@ body::after {
   box-shadow: 0 0 10px rgba(119, 119, 119, 0.25);
   border-radius: 0.5rem;
   z-index: 1;
+  overflow: auto;
 }
 
 .info-ppal-modal {
@@ -528,5 +529,10 @@ body::after {
 
   .container-modal-sec {
     width: 90vw;
+    height: 95vh;
+  }
+
+  .info-ppal-modal {
+    grid-template-columns: none;
   }
 }
