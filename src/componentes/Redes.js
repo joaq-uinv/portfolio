@@ -17,6 +17,15 @@ export default function Redes() {
           <i className="fab fa-linkedin-in"></i>
         </a>
       </span>
+      <span className="item-redes">
+        <a
+          href="https://twitter.com/_JoaquinScript"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i class="fab fa-twitter"></i>
+        </a>
+      </span>
     </div>
   );
 }

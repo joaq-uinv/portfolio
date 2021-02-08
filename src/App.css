@@ -535,4 +535,8 @@ body::after {
   .info-ppal-modal {
     grid-template-columns: none;
   }
+
+  .icono-tech {
+    font-size: 1rem;
+  }
 }
