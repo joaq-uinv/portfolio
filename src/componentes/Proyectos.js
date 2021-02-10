@@ -2,6 +2,7 @@ import React, { useState } from "react";
 //imgs
 import calcJud from "../imgs/calcJud.png";
 import MNDS from "../imgs/MNDS.png";
+import SA from "../imgs/s-a.png";
 //componentes
 import Img from "./Img";
 
@@ -10,12 +11,13 @@ export default function Proyectos() {
   const [x, setX] = useState(0);
 
   const imgs = [
+    <Img src={SA} alt="SA" href="https://sellan-aguirre.web.app" />,
     <Img
       src={calcJud}
-      alt="proyecto-uno"
+      alt="calculadora"
       href="https://calculadorajudicial.web.app"
     />,
-    <Img src={MNDS} alt="proyecto-dos" href="https://valor-monedas.web.app" />,
+    <Img src={MNDS} alt="criptos" href="https://valor-monedas.web.app" />,
   ];
 
   const anterior = () => {
