@@ -17,7 +17,7 @@ export default function Proyectos() {
       alt="calculadora"
       href="https://calculadorajudicial.web.app"
     />,
-    // <Img src={MNDS} alt="criptos" href="https://valor-monedas.web.app" />,
+    <Img src={MNDS} alt="criptos" href="https://valor-monedas.web.app" />,
   ];
 
   const anterior = () => {
